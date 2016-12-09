@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 var options = multer.diskStorage({
 	destination: 'temp/',
 	filename: function (req, file, cb) {
-		cb(null, req.params.scoutid);
+		cb(null, 'upload.csv');
 	}
 });
 var csv_uploads = multer({ storage: options });
